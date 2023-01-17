@@ -1,6 +1,7 @@
 import asyncio
 from pyrogram import Client, compose,idle
 import os
+from subprocess import Popen
 
 from plugins.cb_data import app as Client2
 
@@ -25,6 +26,7 @@ bot = Client(
 
            plugins=dict(root='plugins'))
            
+Popen("gunicorn app:app", shell=True)
 
 if STRING:
     apps = [Client2,bot]
