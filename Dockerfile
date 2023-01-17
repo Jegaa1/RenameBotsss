@@ -3,7 +3,7 @@ FROM ubuntu:latest
 WORKDIR /app
 RUN chmod 777 /app
 
-RUN apt-get -y update && apt-get -y upgrade && apt-get install apt-utils -y && \
+RUN apt-get -y update && apt-get -y upgrade && \
     apt-get install -y python3 python3-pip git ffmpeg
 
 COPY requirements.txt .
